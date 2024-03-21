@@ -13,9 +13,12 @@ public class TP1_3_H071231034 {
 
         int hari=Integer.parseInt(bagian[0]);
         int tahun=Integer.parseInt(bagian[2]);
-
-        tahun+=2000;
-
+        
+        if(tahun>41||tahun==41){
+            tahun+=1900;
+        }else{
+            tahun+=2000;
+        }
         String bulan = ubahBulan(bagian[1]);
 
         return hari+" "+bulan+" "+tahun;
